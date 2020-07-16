@@ -8,4 +8,4 @@ First, take this model: https://www.roblox.com/library/5356342564/ChatPlus
 
 Then, place it into somewhere on the server.
 
-The rest of how to set it up is in the script!
+The rest of how to set it up is in the ModuleScript!
