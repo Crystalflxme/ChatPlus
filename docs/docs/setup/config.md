@@ -1,4 +1,4 @@
-Editing the config of ChatPlus is made easy by the amount of comments in the config already to help you through the process. If you've change your default config and want to get the comments back or look at something again, use the default config below.
+Editing the config of ChatPlus is made easy by the amount of comments in the config already to help you through the process. If you've change your default config and want to get the comments back or look at something again, use the entire default config below.
 
 ```lua
 return {
