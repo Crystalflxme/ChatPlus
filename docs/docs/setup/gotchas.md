@@ -3,6 +3,11 @@ When configuring ChatPlus, there are a few system specific things that you'll wa
 !!! info "Fun Fact"
     If you would like a direct reference to the system/server speaker object that's built into ChatPlus, you can reference "ChatPlus.SystemMessenger" to get it.
 
+!!! warning
+    Please do not edit the value called "BuildNum" in the Main script because it's used to check if the system is out of date.
+
+    If you want to stick with an older version you might want to enable "DisableUpdateChecker" in the system settings.
+
 ## ChatPlus Formatting
 
 ChatPlus uses a special formatting method that is based off of Roblox's default Lua Chat System "ExtraData" property. You can read more about the ExtraData property [here](https://developer.roblox.com/en-us/articles/Lua-Chat-System/API/ChatMessage). 
@@ -38,4 +43,3 @@ More examples of FormattingTables can be found [here on the examples page](/exam
 
 4. Ranks without a greater or less than symbol will take priority over formatting that has them.
 > **Example:** The rank "250" formatting would take priority over the ">200" rank formatting even though it is still true.
-
