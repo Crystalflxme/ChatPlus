@@ -3,7 +3,7 @@ SpeakerPlus.__index = SpeakerPlus
 
 local ServerScriptService = game:GetService("ServerScriptService")
 local ChatService = require(ServerScriptService:WaitForChild("ChatServiceRunner").ChatService)
-local ChatUtil = require(script.Parent:WaitForChild("ChatUtil"))
+local Util = require(script.Parent:WaitForChild("Util"))
 
 function SpeakerPlus.new(speakerName, formattingTable)
 	assert(speakerName, "SpeakerName not found when trying to setup new SpeakerPlusObject")
@@ -14,7 +14,7 @@ function SpeakerPlus.new(speakerName, formattingTable)
 	local SpeakerObject = ChatService:AddSpeaker(speakerName)
 	newSpeakerPlus.Speaker = SpeakerObject
 	
-	if formattingTable then ChatUtil.ApplyChatData(SpeakerObject, formattingTable) end
+	if formattingTable then Util.ApplyChatData(SpeakerObject, formattingTable) end
 	
 	if not ChatService:GetChannel("All") then
 		while wait() do
@@ -31,7 +31,7 @@ end
 
 function SpeakerPlus:SetFormattingTable(formattingTable)
 	assert(formattingTable, 'FormattingTable not found when trying set formatting for speaker "' .. self.Speaker.Name .. '"')
-	ChatUtil.ApplyChatData(self.Speaker, formattingTable)
+	Util.ApplyChatData(self.Speaker, formattingTable)
 end
 
 function SpeakerPlus:Chat(text)

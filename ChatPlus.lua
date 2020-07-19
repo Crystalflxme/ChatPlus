@@ -5,7 +5,7 @@
   | /  \/ |__   __ _| |_| |_/ / |_   _ ___ 
   | |   | '_ \ / _` | __|  __/| | | | / __|
   | \__/\ | | | (_| | |_| |   | | |_| \__ \
-   \____/_| |_|\__,_|\__\_|   |_|\__,_|___/  v1.1.0
+   \____/_| |_|\__,_|\__\_|   |_|\__,_|___/  v1.2.0
 
   By Crystalflxme (https://www.roblox.com/users/64917350)
 
@@ -20,7 +20,12 @@
 ===================================
 
 Thanks for using ChatPlus! The entire setup process and more is documented here:
-https://crystalflxme.github.io/ChatPlus/
+https://crystalflxme.github.io/ChatPlus/setup/getting-started
+
+If you don't want to look at the documentation (very much recommended), then run this command in your command bar to setup ChatPlus:
+p=PATH_TO_CHATPLUS f=p.ToLoadIntoChat for i,v in pairs(f:GetChildren()) do v.Parent=game:GetService("Chat") end f:Destroy()
+
+Don't forget to change PATH_TO_CHATPLUS to the path to the ChatPlus module (wherever you put it).
 
 ]]
 
@@ -85,6 +90,37 @@ return {
 				{"Tags", {{TagText = "Almost Cool", TagColor = Color3.fromRGB(100, 220, 100)}}}
 			}
 		},
+		
+	},
+	
+	--== Settings for client-sided aspects of the chat in your game. ==--
+	ClientChatOptions = {
+		
+		--== Default settings for your game's BubbleChat. Most of these values are dynamic and can be changed at any time. See here: https://crystalflxme.github.io/ChatPlus/setup/dynamic-client-chat-options/ ==--
+		BubbleChat = {
+			
+			--== Not Dynamic | If enabled, bubble chat will show for players. ==--
+			Enabled = true,
+			
+			--== The font for the BubbleChat ==--
+			Font = Enum.Font.SourceSans,
+			
+			--== The font size for the BubbleChat. MUST FIT A FONTSIZE ENUM: https://developer.roblox.com/en-us/api-reference/enum/FontSize ==--
+			FontSize = 24,
+			
+			--== The color of the text in the bubble. ==--
+			TextColor = Color3.fromRGB(0, 0, 0),
+			
+			--== The background color of the bubble. ==--
+			BackgroundColor = Color3.fromRGB(255, 255, 255),
+			
+			--== The max distance before chat bubbles say "..." ==--
+			NearBubbleDistance = 65,
+			
+			--==  The max distance before chat bubbles disappear. ==--
+			MaxBubbleDistance = 100
+			
+		}
 		
 	},
 	
