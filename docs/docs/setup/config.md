@@ -65,8 +65,38 @@ return {
 		
 	},
 	
+	--== Settings for client-sided aspects of the chat in your game. ==--
+	ClientChatOptions = {
+		
+		--== Default settings for your game's BubbleChat. Most of these values are dynamic and can be changed at any time. See here: https://crystalflxme.github.io/ChatPlus/setup/dynamic-client-chat-options/ ==--
+		BubbleChat = {
+			
+			--== Not Dynamic | If enabled, bubble chat will show for players. ==--
+			Enabled = true,
+
+			--== The font for the BubbleChat ==--
+			Font = Enum.Font.SourceSans,
+			
+			--== The font size for the BubbleChat. MUST FIT A FONTSIZE ENUM: https://developer.roblox.com/en-us/api-reference/enum/FontSize ==--
+			FontSize = 24,
+			
+			--== The color of the text in the bubble. ==--
+			TextColor = Color3.fromRGB(0, 0, 0),
+			
+			--== The background color of the bubble. ==--
+			BackgroundColor = Color3.fromRGB(255, 255, 255),
+			
+			--== The max distance before chat bubbles say "..." ==--
+			NearBubbleDistance = 65,
+			
+			--==  The max distance before chat bubbles disappear. ==--
+			MaxBubbleDistance = 100
+			
+		}
+		
+	},
+	
 	
 	-- // Don't touch the things below this line! They are not settings! // --
 	SystemMessenger = nil
-}
 ```

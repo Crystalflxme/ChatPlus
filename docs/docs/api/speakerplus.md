@@ -14,6 +14,12 @@ SpeakerPlus.new()
 | SpeakerName | string | Yes |
 | FormattingTable | array | No |
 
+**Returns:**
+
+| Name | Type |
+| --- | --- |
+| SpeakerPlusObject | object |
+
 
 ## SpeakerPlusObject
 

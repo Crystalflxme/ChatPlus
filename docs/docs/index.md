@@ -10,6 +10,7 @@ Here are some of the system's features:
 - Assign complex formatting for groups such as: rank specific formatting, ranges of ranks, and formatting to be applied to all members
 - Setup a custom system/server message with your own formatting
 - A [built in module](api/speakerplus.md) for easily creating your own custom [ChatSpeakers](https://developer.roblox.com/en-us/articles/Lua-Chat-System/API/ChatSpeaker)
+- [Client sided settings](setup/dynamic-client-chat-options.md) to dynammically control things like BubbleChat at any time needed
 
 <br>
 

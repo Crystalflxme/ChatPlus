@@ -83,5 +83,7 @@ nav:
     - Getting started: setup/getting-started.md
     - System gotchas: setup/gotchas.md
     - Editing the config: setup/config.md
+    - Dynamic client chat options: setup/dynamic-client-chat-options.md
   - API:
     - SpeakerPlus: api/speakerplus.md
+    - Util: api/util.md
