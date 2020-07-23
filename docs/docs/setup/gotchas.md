@@ -1,7 +1,7 @@
 When configuring ChatPlus, there are a few system specific things that you'll want to keep in mind to effectively use the system. They can be seen below.
 
 !!! info "Fun Fact"
-    If you would like a direct reference to the system/server speaker object that's built into ChatPlus, you can reference "ChatPlus.SystemMessenger" to get it.
+    If you would like a direct reference to the system/server SpeakerPlus object that's built into ChatPlus, you can reference "ChatPlus.SystemMessenger" to get it.
 
 !!! warning
     Please do not edit the value called "BuildNum" in the Main script because it's used to check if the system is out of date.

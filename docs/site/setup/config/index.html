@@ -376,6 +376,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamic-client-chat-options/" title="Dynamic client chat options" class="md-nav__link">
+      Dynamic client chat options
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -414,6 +426,18 @@
   <li class="md-nav__item">
     <a href="../../api/speakerplus/" title="SpeakerPlus" class="md-nav__link">
       SpeakerPlus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/util/" title="Util" class="md-nav__link">
+      Util
     </a>
   </li>
 
@@ -506,10 +530,40 @@
 
     <span class="p">},</span>
 
+    <span class="c1">--== Settings for client-sided aspects of the chat in your game. ==--</span>
+    <span class="n">ClientChatOptions</span> <span class="o">=</span> <span class="p">{</span>
+
+        <span class="c1">--== Default settings for your game&#39;s BubbleChat. Most of these values are dynamic and can be changed at any time. See here: https://crystalflxme.github.io/ChatPlus/setup/dynamic-client-chat-options/ ==--</span>
+        <span class="n">BubbleChat</span> <span class="o">=</span> <span class="p">{</span>
+
+            <span class="c1">--== Not Dynamic | If enabled, bubble chat will show for players. ==--</span>
+            <span class="n">Enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+
+            <span class="c1">--== The font for the BubbleChat ==--</span>
+            <span class="n">Font</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">SourceSans</span><span class="p">,</span>
+
+            <span class="c1">--== The font size for the BubbleChat. MUST FIT A FONTSIZE ENUM: https://developer.roblox.com/en-us/api-reference/enum/FontSize ==--</span>
+            <span class="n">FontSize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span>
+
+            <span class="c1">--== The color of the text in the bubble. ==--</span>
+            <span class="n">TextColor</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+
+            <span class="c1">--== The background color of the bubble. ==--</span>
+            <span class="n">BackgroundColor</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+
+            <span class="c1">--== The max distance before chat bubbles say &quot;...&quot; ==--</span>
+            <span class="n">NearBubbleDistance</span> <span class="o">=</span> <span class="mi">65</span><span class="p">,</span>
+
+            <span class="c1">--==  The max distance before chat bubbles disappear. ==--</span>
+            <span class="n">MaxBubbleDistance</span> <span class="o">=</span> <span class="mi">100</span>
+
+        <span class="p">}</span>
+
+    <span class="p">},</span>
+
 
     <span class="c1">-- // Don&#39;t touch the things below this line! They are not settings! // --</span>
     <span class="n">SystemMessenger</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="p">}</span>
 </code></pre></div>
                 
               
@@ -544,13 +598,13 @@
           </a>
         
         
-          <a href="../../api/speakerplus/" title="SpeakerPlus" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dynamic-client-chat-options/" title="Dynamic client chat options" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                SpeakerPlus
+                Dynamic client chat options
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

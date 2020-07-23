@@ -419,6 +419,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamic-client-chat-options/" title="Dynamic client chat options" class="md-nav__link">
+      Dynamic client chat options
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -457,6 +469,18 @@
   <li class="md-nav__item">
     <a href="../../api/speakerplus/" title="SpeakerPlus" class="md-nav__link">
       SpeakerPlus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/util/" title="Util" class="md-nav__link">
+      Util
     </a>
   </li>
 
@@ -532,6 +556,9 @@
 <ol>
 <li>First, <a href="https://www.roblox.com/library/5356342564/ChatPlus">get the model for ChatPlus here on Roblox</a></li>
 <li>Once you insert the model in your game, place the ChatPlus module on the server-side. It is recommended that you put it in ServerScriptService.</li>
+<li>Run the following code in your command bar and make sure to replace the <code>PATH_TO_CHATPLUS</code> to the path that leads to the ChatPlus module.
+<div class="highlight"><pre><span></span><code><span class="n">p</span><span class="o">=</span><span class="n">PATH_TO_CHATPLUS</span> <span class="n">f</span><span class="o">=</span><span class="n">p</span><span class="p">.</span><span class="n">ToLoadIntoChat</span> <span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">f</span><span class="p">:</span><span class="n">GetChildren</span><span class="p">())</span> <span class="kr">do</span> <span class="n">v</span><span class="p">.</span><span class="n">Parent</span><span class="o">=</span><span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;Chat&quot;</span><span class="p">)</span> <span class="kr">end</span> <span class="n">f</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+</code></pre></div></li>
 <li>You're done! Feel free to mess around with the system!</li>
 </ol>
 <p><br></p>
