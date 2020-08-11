@@ -65,6 +65,24 @@ return {
 		
 	},
 	
+	--== The list of gamepasses that can have special formatting. ==--
+	Gamepasses = {
+		
+		--== An ID of a gamepass you want goes here. ==--
+		[7785070] = {
+			
+			--== The priority of this gamepass goes here. The lower the number, the higher priority of the gamepass. ==--
+			Priority = 10,
+			
+			--== The special formatting that should be applied if this gamepass is owned and is the highest priority. ==--
+			Formatting = {
+				{"Tags", {{TagText = "Gamepass Person", TagColor = Color3.fromRGB(0, 255, 0)}}}
+			}
+			
+		}
+		
+	},
+	
 	--== Settings for client-sided aspects of the chat in your game. ==--
 	ClientChatOptions = {
 		
@@ -73,7 +91,7 @@ return {
 			
 			--== Not Dynamic | If enabled, bubble chat will show for players. ==--
 			Enabled = true,
-
+			
 			--== The font for the BubbleChat ==--
 			Font = Enum.Font.SourceSans,
 			
@@ -99,4 +117,5 @@ return {
 	
 	-- // Don't touch the things below this line! They are not settings! // --
 	SystemMessenger = nil
+}
 ```

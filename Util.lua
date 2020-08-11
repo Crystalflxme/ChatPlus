@@ -1,4 +1,5 @@
 local InsertService = game:GetService("InsertService")
+local MarketplaceService = game:GetService("MarketplaceService")
 
 local Util = {}
 local DataTypes = {
@@ -51,6 +52,21 @@ function Util.FindHighestPriorityGroup(player, groups)
 		end
 	end
 	return relevantGroupId
+end
+
+function Util.FindHighestPriorityGamepass(player, gamepasses)
+	assert(player, 'Parameter "Player" not found')
+	assert(gamepasses, 'Parameter "Gamepasses" not found')
+	
+	local highestPriority = math.huge
+	local relevantGamepassId
+	for gamepassId, gamepassData in pairs(gamepasses) do
+		if MarketplaceService:UserOwnsGamePassAsync(player.UserId, gamepassId) and gamepassData.Priority < highestPriority then
+			highestPriority = gamepassData.Priority
+			relevantGamepassId = gamepassId
+		end
+	end
+	return relevantGamepassId
 end
 
 function Util.GetRankTypes(groupData)

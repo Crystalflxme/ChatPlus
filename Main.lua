@@ -3,6 +3,7 @@ local Chat = game:GetService("Chat")
 local InsertService = game:GetService("InsertService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
+local MarketplaceService = game:GetService("MarketplaceService")
 local ModuleSettings = require(script.Parent)
 
 -- System Validation --
@@ -16,6 +17,7 @@ assert(ModuleSettings.DefaultSystemMessageFormatting, 'Settings Issue - "Default
 assert(ModuleSettings.DefaultMessageFormatting, 'Settings Issue - "DefaultMessageFormatting" not found')
 assert(ModuleSettings.Users, 'Settings Issue - "Users" not found')
 assert(ModuleSettings.Groups, 'Settings Issue - "Groups" not found')
+assert(ModuleSettings.Gamepasses, 'Settings Issue - "Gamepasses" not found')
 assert(ModuleSettings.ClientChatOptions, 'Settings Issue - "ClientChatOptions" not found')
 
 -- Load ClientChatOptions with Util --
@@ -29,6 +31,19 @@ ClientChatOptions.Parent = ReplicatedStorage
 local ChatService = require(ServerScriptService:WaitForChild("ChatServiceRunner").ChatService)
 local SpeakerPlus = require(script.Parent:WaitForChild("SpeakerPlus"))
 
+-- Local Functions --
+local function CheckGamepasses(player)
+	local speaker = ChatService:GetSpeaker(player.Name)
+	local gamepassId = Util.FindHighestPriorityGamepass(player, ModuleSettings.Gamepasses)
+	
+	if gamepassId then
+		Util.ApplyChatData(speaker, ModuleSettings.Gamepasses[gamepassId].Formatting)
+		return true
+	else
+		return false
+	end
+end
+
 -- Connections --
 ChatService.SpeakerAdded:Connect(function(speakerName)
 	if game.Players:FindFirstChild(speakerName) then
@@ -41,11 +56,15 @@ ChatService.SpeakerAdded:Connect(function(speakerName)
 			Util.ApplyChatData(speaker, ModuleSettings.Users[player.UserId])
 		else
 			local groupId = Util.FindHighestPriorityGroup(player, ModuleSettings.Groups)
+			
 			if groupId then
+				
 				local groupData = ModuleSettings.Groups[groupId]
 				local playerRank = player:GetRankInGroup(groupId)
 				
-				Util.ApplyChatData(speaker, groupData.Global)
+				if ModuleSettings.Groups.Global then
+					Util.ApplyChatData(speaker, groupData.Global)
+				end
 				
 				local staticRanks, dynamicRanks = Util.GetRankTypes(groupData)
 				local skipDynamic = false
@@ -67,8 +86,18 @@ ChatService.SpeakerAdded:Connect(function(speakerName)
 						end
 					end
 				end
+				
+			else
+				CheckGamepasses(player)
 			end
+			
 		end
+	end
+end)
+
+MarketplaceService.PromptGamePassPurchaseFinished:Connect(function(player, gamepassId, wasPurchased)
+	if wasPurchased and ModuleSettings.Gamepasses[gamepassId] then
+		CheckGamepasses(player)
 	end
 end)
 

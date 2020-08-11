@@ -5,7 +5,7 @@
   | /  \/ |__   __ _| |_| |_/ / |_   _ ___ 
   | |   | '_ \ / _` | __|  __/| | | | / __|
   | \__/\ | | | (_| | |_| |   | | |_| \__ \
-   \____/_| |_|\__,_|\__\_|   |_|\__,_|___/  v1.2.0
+   \____/_| |_|\__,_|\__\_|   |_|\__,_|___/  v1.3.0
 
   By Crystalflxme (https://www.roblox.com/users/64917350)
 
@@ -90,6 +90,24 @@ return {
 				{"Tags", {{TagText = "Almost Cool", TagColor = Color3.fromRGB(100, 220, 100)}}}
 			}
 		},
+		
+	},
+	
+	--== The list of gamepasses that can have special formatting. ==--
+	Gamepasses = {
+		
+		--== An ID of a gamepass you want goes here. ==--
+		[7785070] = {
+			
+			--== The priority of this gamepass goes here. The lower the number, the higher priority of the gamepass. ==--
+			Priority = 10,
+			
+			--== The special formatting that should be applied if this gamepass is owned and is the highest priority. ==--
+			Formatting = {
+				{"Tags", {{TagText = "Gamepass Person", TagColor = Color3.fromRGB(0, 255, 0)}}}
+			}
+			
+		}
 		
 	},
 	

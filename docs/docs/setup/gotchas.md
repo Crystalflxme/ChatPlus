@@ -35,10 +35,12 @@ More examples of FormattingTables can be found [here on the examples page](/exam
 
 1. The "Global" tag under the "Groups" table will apply to every single user and bypasses any formatting priority in the group.
 
+3. Gamepasses have the lowest formatting priority and will only show if the user is not in the Users table or in a specified group.
+
 2. If a user is listed under the "Users" table, then that formatting will take priority over *any* other formatting (even groups).
 > **Example:** If the user is a rank that gets formatting in a group, all if it will be overridden by whatever the user formatting is (even the "Global" tag).
 
-3. The group "Priority" number represents what groups should take formatting priority over the other.
+3. The group "Priority" number represents what groups/gamepasses should take formatting priority over the other.
 > **Example:** If a user is in more than one group listed the group with more priority (smaller number) will be used for formatting.
 
 4. Ranks without a greater or less than symbol will take priority over formatting that has them.
