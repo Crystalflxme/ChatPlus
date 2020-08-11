@@ -11,6 +11,7 @@ Here are some of the system's features:
 - Setup a custom system/server message with your own formatting
 - A [built in module](api/speakerplus.md) for easily creating your own custom [ChatSpeakers](https://developer.roblox.com/en-us/articles/Lua-Chat-System/API/ChatSpeaker)
 - [Client sided settings](setup/dynamic-client-chat-options.md) to dynammically control things like BubbleChat at any time needed
+- Ability to have special formatting for gamepass owners
 
 <br>
 
