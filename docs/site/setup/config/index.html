@@ -196,6 +196,19 @@
   
     <li class="md-tabs__item">
       
+        <a href="../../maintaining/updating/" class="md-tabs__link">
+          Maintaining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
         <a href="../../api/speakerplus/" class="md-tabs__link">
           API
         </a>
@@ -403,13 +416,55 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
+      Maintaining
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Maintaining" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Maintaining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../maintaining/updating/" title="Updating ChatPlus" class="md-nav__link">
+      Updating ChatPlus
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       API
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="API" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -530,6 +585,24 @@
 
     <span class="p">},</span>
 
+    <span class="c1">--== The list of gamepasses that can have special formatting. ==--</span>
+    <span class="n">Gamepasses</span> <span class="o">=</span> <span class="p">{</span>
+
+        <span class="c1">--== An ID of a gamepass you want goes here. ==--</span>
+        <span class="p">[</span><span class="mi">7785070</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+
+            <span class="c1">--== The priority of this gamepass goes here. The lower the number, the higher priority of the gamepass. ==--</span>
+            <span class="n">Priority</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+
+            <span class="c1">--== The special formatting that should be applied if this gamepass is owned and is the highest priority. ==--</span>
+            <span class="n">Formatting</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="p">{</span><span class="s2">&quot;Tags&quot;</span><span class="p">,</span> <span class="p">{{</span><span class="n">TagText</span> <span class="o">=</span> <span class="s2">&quot;Gamepass Person&quot;</span><span class="p">,</span> <span class="n">TagColor</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)}}}</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+
+    <span class="p">},</span>
+
     <span class="c1">--== Settings for client-sided aspects of the chat in your game. ==--</span>
     <span class="n">ClientChatOptions</span> <span class="o">=</span> <span class="p">{</span>
 
@@ -564,6 +637,7 @@
 
     <span class="c1">-- // Don&#39;t touch the things below this line! They are not settings! // --</span>
     <span class="n">SystemMessenger</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">}</span>
 </code></pre></div>
                 
               

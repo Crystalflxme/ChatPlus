@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://crystalflxme.github.io/ChatPlus/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/examples/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/setup/getting-started/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/setup/gotchas/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/setup/config/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/setup/dynamic-client-chat-options/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://crystalflxme.github.io/ChatPlus/maintaining/updating/</loc>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/api/speakerplus/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://crystalflxme.github.io/ChatPlus/api/util/</loc>
-     <lastmod>2020-07-19</lastmod>
+     <lastmod>2020-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
