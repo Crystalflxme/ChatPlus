@@ -1,7 +1,0 @@
-# Distribution files
-docs
-material
-src/**/*.html
-
-# Don't lint shame
-src/assets/stylesheets/_shame.scss
